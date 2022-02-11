@@ -4,12 +4,18 @@
     <Filter Include="sort">
       <UniqueIdentifier>{384845b2-fb9e-46b6-9540-62cc9d70d92a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="hash">
+      <UniqueIdentifier>{03de999c-5da1-40e1-93a7-561c9ce89c0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
       <Filter>sort</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="A player who didn%27t finish the race.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
