@@ -7,6 +7,9 @@
     <Filter Include="hash">
       <UniqueIdentifier>{03de999c-5da1-40e1-93a7-561c9ce89c0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="stack queue">
+      <UniqueIdentifier>{ebc25106-e63e-41c8-8b2f-14ac5cd82e75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -15,6 +18,9 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="A player who didn%27t finish the race.cpp">
       <Filter>hash</Filter>
+    </ClCompile>
+    <ClCompile Include="function development.cpp">
+      <Filter>stack queue</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
