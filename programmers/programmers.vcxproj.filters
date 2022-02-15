@@ -28,6 +28,9 @@
     <ClCompile Include="more spicy.cpp">
       <Filter>heap</Filter>
     </ClCompile>
+    <ClCompile Include="K number.cpp">
+      <Filter>sort</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
