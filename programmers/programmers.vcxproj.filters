@@ -13,6 +13,9 @@
     <Filter Include="heap">
       <UniqueIdentifier>{8fc34d86-6f09-4d44-ae9d-6296d64847af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="exhaustive search">
+      <UniqueIdentifier>{46e1e251-0046-4c6a-91f4-a5b8225f4b38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -30,6 +33,9 @@
     </ClCompile>
     <ClCompile Include="K number.cpp">
       <Filter>sort</Filter>
+    </ClCompile>
+    <ClCompile Include="mock test.cpp">
+      <Filter>exhaustive search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
