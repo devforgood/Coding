@@ -16,6 +16,9 @@
     <Filter Include="exhaustive search">
       <UniqueIdentifier>{46e1e251-0046-4c6a-91f4-a5b8225f4b38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="greedy">
+      <UniqueIdentifier>{68a72597-d556-4e72-8781-00d323fb8e48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -36,6 +39,9 @@
     </ClCompile>
     <ClCompile Include="mock test.cpp">
       <Filter>exhaustive search</Filter>
+    </ClCompile>
+    <ClCompile Include="gym clothes.cpp">
+      <Filter>greedy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
