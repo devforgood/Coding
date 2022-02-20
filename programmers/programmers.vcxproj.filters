@@ -19,6 +19,9 @@
     <Filter Include="greedy">
       <UniqueIdentifier>{68a72597-d556-4e72-8781-00d323fb8e48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dynamic programming">
+      <UniqueIdentifier>{e519501f-fc93-4d0e-b0f3-0fa0d638b9fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -42,6 +45,9 @@
     </ClCompile>
     <ClCompile Include="gym clothes.cpp">
       <Filter>greedy</Filter>
+    </ClCompile>
+    <ClCompile Include="N expression .cpp">
+      <Filter>dynamic programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
