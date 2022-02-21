@@ -22,6 +22,9 @@
     <Filter Include="dynamic programming">
       <UniqueIdentifier>{e519501f-fc93-4d0e-b0f3-0fa0d638b9fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DFS BFS">
+      <UniqueIdentifier>{c37d2781-a0c8-4379-a8c6-4217464456d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -48,6 +51,9 @@
     </ClCompile>
     <ClCompile Include="N expression .cpp">
       <Filter>dynamic programming</Filter>
+    </ClCompile>
+    <ClCompile Include="target number.cpp">
+      <Filter>DFS BFS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
