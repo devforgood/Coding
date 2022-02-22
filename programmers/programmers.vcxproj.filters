@@ -25,6 +25,9 @@
     <Filter Include="DFS BFS">
       <UniqueIdentifier>{c37d2781-a0c8-4379-a8c6-4217464456d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="binaray search">
+      <UniqueIdentifier>{e7cf1850-85b9-482b-ac58-654e1431f336}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -54,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="target number.cpp">
       <Filter>DFS BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="immigration.cpp">
+      <Filter>binaray search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
