@@ -158,6 +158,7 @@
   <ItemGroup>
     <ClCompile Include="A player who didn%27t finish the race.cpp" />
     <ClCompile Include="BiggestNumber.cpp" />
+    <ClCompile Include="farthest node.cpp" />
     <ClCompile Include="function development.cpp" />
     <ClCompile Include="gym clothes.cpp" />
     <ClCompile Include="immigration.cpp" />

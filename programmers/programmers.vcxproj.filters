@@ -28,6 +28,9 @@
     <Filter Include="binaray search">
       <UniqueIdentifier>{e7cf1850-85b9-482b-ac58-654e1431f336}</UniqueIdentifier>
     </Filter>
+    <Filter Include="graph">
+      <UniqueIdentifier>{da87b3fa-91b8-407e-a1a6-a912f98e802e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BiggestNumber.cpp">
@@ -60,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="immigration.cpp">
       <Filter>binaray search</Filter>
+    </ClCompile>
+    <ClCompile Include="farthest node.cpp">
+      <Filter>graph</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
