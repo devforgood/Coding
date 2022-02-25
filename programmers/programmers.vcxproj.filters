@@ -70,6 +70,9 @@
     <ClCompile Include="phone numbers list.cpp">
       <Filter>hash</Filter>
     </ClCompile>
+    <ClCompile Include="printer.cpp">
+      <Filter>stack queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
