@@ -73,6 +73,9 @@
     <ClCompile Include="printer.cpp">
       <Filter>stack queue</Filter>
     </ClCompile>
+    <ClCompile Include="disk controller.cpp">
+      <Filter>heap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
