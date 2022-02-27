@@ -76,6 +76,9 @@
     <ClCompile Include="disk controller.cpp">
       <Filter>heap</Filter>
     </ClCompile>
+    <ClCompile Include="disk controller 2.cpp">
+      <Filter>heap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
