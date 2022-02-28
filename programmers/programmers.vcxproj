@@ -157,7 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="A player who didn%27t finish the race.cpp" />
-    <ClCompile Include="BiggestNumber.cpp" />
+    <ClCompile Include="biggest number.cpp" />
     <ClCompile Include="disk controller 2.cpp" />
     <ClCompile Include="disk controller.cpp" />
     <ClCompile Include="farthest node.cpp" />

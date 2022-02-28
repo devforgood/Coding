@@ -27,21 +27,18 @@ namespace programmers
     {
     public:
 
-        struct cmp {
-            bool operator()(string a, string b)
-            {
-                // 최소 길이 비교후 같을 경우 두개의 최대 길이로 비교
-                return a + b > b + a;
-            }
-        };
 
         string solution(vector<int> numbers) {
             string answer = "";
+
             vector<string> num;
             for (int i = 0; i < numbers.size(); ++i)
                 num.push_back(to_string(numbers[i]));
 
-            sort(num.begin(), num.end(), cmp());
+            sort(num.begin(), num.end(),[](const string& a, const string& b)->bool
+                {
+                    return a + b > b + a;
+                });
 
             for (int i = 0; i < num.size(); ++i)
                 answer += num[i];
@@ -54,9 +51,8 @@ namespace programmers
 
         TEST_METHOD(TestMethod1)
         {
-            vector<int> numbers = { 3, 30, 34, 5, 9 };
-
-            Assert::AreEqual(string("9534330"), solution(numbers));
+            vector<int> numbers = { 6, 10, 2 };
+            Assert::AreEqual(true, solution(numbers) == "6210");
 
         }
 

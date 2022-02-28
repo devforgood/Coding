@@ -33,9 +33,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BiggestNumber.cpp">
-      <Filter>sort</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="A player who didn%27t finish the race.cpp">
       <Filter>hash</Filter>
@@ -78,6 +75,9 @@
     </ClCompile>
     <ClCompile Include="disk controller 2.cpp">
       <Filter>heap</Filter>
+    </ClCompile>
+    <ClCompile Include="biggest number.cpp">
+      <Filter>sort</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
