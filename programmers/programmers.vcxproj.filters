@@ -79,6 +79,9 @@
     <ClCompile Include="biggest number.cpp">
       <Filter>sort</Filter>
     </ClCompile>
+    <ClCompile Include="prime search.cpp">
+      <Filter>exhaustive search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -175,6 +175,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="phone numbers list.cpp" />
+    <ClCompile Include="prime search.cpp" />
     <ClCompile Include="printer.cpp" />
     <ClCompile Include="target number.cpp" />
   </ItemGroup>
