@@ -109,6 +109,8 @@ namespace programmers
 
         TEST_METHOD(TestMethod1)
         {
+            Assert::AreEqual(true, solution("BAABAAAAAAAC") == 9);
+            Assert::AreEqual(true, solution("BBAAAAC") == 7);
 
             Assert::AreEqual(true, solution("JEROEN") == 56);
             Assert::AreEqual(true, solution("JAN") == 23);
