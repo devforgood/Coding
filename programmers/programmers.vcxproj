@@ -164,6 +164,7 @@
     <ClCompile Include="function development.cpp" />
     <ClCompile Include="gym clothes.cpp" />
     <ClCompile Include="immigration.cpp" />
+    <ClCompile Include="joystick.cpp" />
     <ClCompile Include="K number.cpp" />
     <ClCompile Include="mock test.cpp" />
     <ClCompile Include="more spicy.cpp" />

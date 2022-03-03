@@ -82,6 +82,9 @@
     <ClCompile Include="prime search.cpp">
       <Filter>exhaustive search</Filter>
     </ClCompile>
+    <ClCompile Include="joystick.cpp">
+      <Filter>greedy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
