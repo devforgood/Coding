@@ -85,6 +85,9 @@
     <ClCompile Include="joystick.cpp">
       <Filter>greedy</Filter>
     </ClCompile>
+    <ClCompile Include="integer triangle.cpp">
+      <Filter>dynamic programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
