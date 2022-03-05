@@ -88,6 +88,9 @@
     <ClCompile Include="integer triangle.cpp">
       <Filter>dynamic programming</Filter>
     </ClCompile>
+    <ClCompile Include="network.cpp">
+      <Filter>DFS BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
