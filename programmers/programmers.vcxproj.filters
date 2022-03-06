@@ -91,6 +91,9 @@
     <ClCompile Include="network.cpp">
       <Filter>DFS BFS</Filter>
     </ClCompile>
+    <ClCompile Include="stepping stone.cpp">
+      <Filter>binaray search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
