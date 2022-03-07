@@ -180,6 +180,7 @@
     <ClCompile Include="phone numbers list.cpp" />
     <ClCompile Include="prime search.cpp" />
     <ClCompile Include="printer.cpp" />
+    <ClCompile Include="rank.cpp" />
     <ClCompile Include="stepping stone.cpp" />
     <ClCompile Include="target number.cpp" />
   </ItemGroup>

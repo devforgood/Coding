@@ -94,6 +94,9 @@
     <ClCompile Include="stepping stone.cpp">
       <Filter>binaray search</Filter>
     </ClCompile>
+    <ClCompile Include="rank.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
