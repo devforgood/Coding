@@ -97,6 +97,9 @@
     <ClCompile Include="rank.cpp">
       <Filter>graph</Filter>
     </ClCompile>
+    <ClCompile Include="camouflage.cpp">
+      <Filter>hash</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
