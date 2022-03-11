@@ -100,6 +100,9 @@
     <ClCompile Include="camouflage.cpp">
       <Filter>hash</Filter>
     </ClCompile>
+    <ClCompile Include="truck crossing the bridge.cpp">
+      <Filter>stack queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

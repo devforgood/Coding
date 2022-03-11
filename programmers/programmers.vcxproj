@@ -184,6 +184,7 @@
     <ClCompile Include="rank.cpp" />
     <ClCompile Include="stepping stone.cpp" />
     <ClCompile Include="target number.cpp" />
+    <ClCompile Include="truck crossing the bridge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
