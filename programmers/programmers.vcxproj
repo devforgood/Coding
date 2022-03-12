@@ -161,6 +161,7 @@
     <ClCompile Include="camouflage.cpp" />
     <ClCompile Include="disk controller 2.cpp" />
     <ClCompile Include="disk controller.cpp" />
+    <ClCompile Include="double priority queue.cpp" />
     <ClCompile Include="farthest node.cpp" />
     <ClCompile Include="function development.cpp" />
     <ClCompile Include="gym clothes.cpp" />

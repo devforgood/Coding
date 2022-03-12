@@ -103,6 +103,9 @@
     <ClCompile Include="truck crossing the bridge.cpp">
       <Filter>stack queue</Filter>
     </ClCompile>
+    <ClCompile Include="double priority queue.cpp">
+      <Filter>heap</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
