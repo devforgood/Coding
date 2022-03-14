@@ -159,6 +159,7 @@
     <ClCompile Include="A player who didn%27t finish the race.cpp" />
     <ClCompile Include="biggest number.cpp" />
     <ClCompile Include="camouflage.cpp" />
+    <ClCompile Include="carpet.cpp" />
     <ClCompile Include="disk controller 2.cpp" />
     <ClCompile Include="disk controller.cpp" />
     <ClCompile Include="double priority queue.cpp" />

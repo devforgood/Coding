@@ -109,6 +109,9 @@
     <ClCompile Include="H-Index.cpp">
       <Filter>sort</Filter>
     </ClCompile>
+    <ClCompile Include="carpet.cpp">
+      <Filter>exhaustive search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
