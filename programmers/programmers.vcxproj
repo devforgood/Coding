@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="A player who didn%27t finish the race.cpp" />
+    <ClCompile Include="big number make.cpp" />
     <ClCompile Include="biggest number.cpp" />
     <ClCompile Include="camouflage.cpp" />
     <ClCompile Include="carpet.cpp" />

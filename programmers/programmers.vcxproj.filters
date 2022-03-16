@@ -112,6 +112,9 @@
     <ClCompile Include="carpet.cpp">
       <Filter>exhaustive search</Filter>
     </ClCompile>
+    <ClCompile Include="big number make.cpp">
+      <Filter>greedy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
