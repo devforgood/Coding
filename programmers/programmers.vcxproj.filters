@@ -115,6 +115,9 @@
     <ClCompile Include="big number make.cpp">
       <Filter>greedy</Filter>
     </ClCompile>
+    <ClCompile Include="way to school.cpp">
+      <Filter>dynamic programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

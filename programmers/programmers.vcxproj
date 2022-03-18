@@ -189,6 +189,7 @@
     <ClCompile Include="stepping stone.cpp" />
     <ClCompile Include="target number.cpp" />
     <ClCompile Include="truck crossing the bridge.cpp" />
+    <ClCompile Include="way to school.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
