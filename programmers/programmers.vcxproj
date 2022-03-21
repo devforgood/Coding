@@ -190,6 +190,7 @@
     <ClCompile Include="target number.cpp" />
     <ClCompile Include="truck crossing the bridge.cpp" />
     <ClCompile Include="way to school.cpp" />
+    <ClCompile Include="word convert.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

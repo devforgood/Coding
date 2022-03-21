@@ -118,6 +118,9 @@
     <ClCompile Include="way to school.cpp">
       <Filter>dynamic programming</Filter>
     </ClCompile>
+    <ClCompile Include="word convert.cpp">
+      <Filter>DFS BFS</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
