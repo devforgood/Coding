@@ -8,10 +8,11 @@ using namespace std;
 
 int n;
 int answer = -1;
-map<int, int> stairs;
+int stairs[100001] = { 0, };
+int visited[100001] = { 0, };
 
 
-void dfs(int start, int cur, map<int, int> visited, int cnt)
+void dfs(int start, int cur, int cnt)
 {
     visited[cur] += 1;
     ++cnt;
@@ -28,14 +29,19 @@ void dfs(int start, int cur, map<int, int> visited, int cnt)
     int next;
 
 	next = cur - 1;
-	if (stairs.find(next) != stairs.end())
-		if (stairs[next] > visited[next])
-			dfs(start, next, visited, cnt);
+    if (stairs[next] > visited[next])
+    {
+        dfs(start, next, cnt);
+        visited[next] -= 1;
+    }
 
 	next = cur + 1;
-	if (stairs.find(next) != stairs.end())
-		if (stairs[next] > visited[next])
-			dfs(start, next, visited, cnt);
+    if (stairs[next] > visited[next])
+    {
+        dfs(start, next, cnt);
+        visited[next] -= 1;
+    }
+
 
 
 }
@@ -50,18 +56,15 @@ int main()
     cin >> n;
 
 
+    int a;
     for (int i = 0; i < n; ++i)
     {
-        int a;
         cin >> a;
         stairs[a] += 1;
     }
 
-    map<int, int> visited;
-    for (auto v : stairs)
-    {
-        dfs(v.first, v.first, visited, 0);
-    }
+
+	dfs(a, a, 0);
 
 
     cout << answer;
