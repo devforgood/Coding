@@ -58,10 +58,12 @@ int main()
                 incre = false;
         }
         else
-        {
-            if (stairs[index - 1] == 0)
-                incre = true;
-        }
+		{
+			if (stairs[index + 1] !=  0)
+				incre = true;
+			else if (stairs[index - 1] == 0)
+				incre = true;
+		}
 
         if (stairs[index] <= 0)
             break;
