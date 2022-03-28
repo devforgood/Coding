@@ -6,45 +6,8 @@
 
 using namespace std;
 
-int n;
-int answer = -1;
-int stairs[100001] = { 0, };
-int visited[100001] = { 0, };
 
 
-void dfs(int start, int cur, int cnt)
-{
-    visited[cur] += 1;
-    ++cnt;
-    if (n == cnt)
-    {
-        if (abs(start - cur) == 1)
-        {
-            answer = 1;
-        }
-
-        return;
-    }
-
-    int next;
-
-	next = cur - 1;
-    if (stairs[next] > visited[next])
-    {
-        dfs(start, next, cnt);
-        visited[next] -= 1;
-    }
-
-	next = cur + 1;
-    if (stairs[next] > visited[next])
-    {
-        dfs(start, next, cnt);
-        visited[next] -= 1;
-    }
-
-
-
-}
 
 
 int main()
@@ -52,6 +15,12 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
+
+
+
+    int n;
+    int answer = -1;
+    map<int, int> stairs;
 
     cin >> n;
 
@@ -64,9 +33,50 @@ int main()
     }
 
 
-	dfs(a, a, 0);
+    bool incre = true;
+    int start = stairs.begin()->first;
+    int end = stairs.rbegin()->first;
 
+    for (int i = start + 1; i <= end - 1; ++i)
+    {
+        if (stairs[i] < 2)
+        {
+            cout << "-1";
+            return 0;
+        }
+    }
+
+
+    int index = stairs.begin()->first;
+    int last_index = 0;
+    int i = 1;
+    for (; i < n; ++i)
+    {
+        if (incre)
+        {
+            if (stairs[index + 1] == 0)
+                incre = false;
+        }
+        else
+        {
+            if (stairs[index - 1] == 0)
+                incre = true;
+        }
+
+        if (stairs[index] <= 0)
+            break;
+
+        stairs[index] -= 1;
+
+        last_index = index;
+        if (incre)
+            ++index;
+        else
+            --index;
+    }
+
+    if (start != end && i==n && abs(index - start) == 1)
+        answer = 1;
 
     cout << answer;
-
 }
