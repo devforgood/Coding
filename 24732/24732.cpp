@@ -12,6 +12,25 @@ vector<long long> calc(const vector<long long>& v, int N) {
     vector<long long> ans(N);
     ans[0] = 1;
 
+    vector<long long> factorial(N+2);
+    factorial[0] = 1;
+    for (int i = 1; i <= N + 1; ++i)
+        factorial[i] = i * factorial[i - 1];
+
+
+    for (int i = 1; i < N; ++i)
+    {
+        ans[i] = factorial[1+v[i-1]] / 2;
+    }
+
+    return ans;
+}
+
+
+vector<long long> calc6(const vector<long long>& v, int N) {
+    vector<long long> ans(N);
+    ans[0] = 1;
+
     vector<set<int>> min_values(N);
     min_values[0].insert(v[0]);
 
@@ -34,20 +53,35 @@ vector<long long> calc5(const vector<long long>& v, int N) {
     ans[0] = 1;
 
     vector<long long> min_values(N);
+    map<long long, int> cnt;
     for (int i = 0; i < N; ++i)
     {
         min_values[i] = v[i]; 
+        cnt[v[i]] += 1;
     }
-    
-    for (int i = 1; i < N; ++i)
+
+    if (cnt.size() == 1)
     {
-        for (int j = 0; j < i; ++j)
+        int sum = 0;
+        for (int i = 1; i < N; ++i)
         {
-            min_values[j] = min(min_values[j], v[i]);
-
-            ans[i] += ans[j] * min_values[j];
+            ans[i] = sum + (ans[i - 1] * cnt.begin()->first);
+            sum = ans[i];
         }
+    }
+    else
+    {
 
+        for (int i = 1; i < N; ++i)
+        {
+            for (int j = 0; j < i; ++j)
+            {
+                min_values[j] = min(min_values[j], v[i]);
+
+                ans[i] += ans[j] * min_values[j];
+            }
+
+        }
     }
 
 
