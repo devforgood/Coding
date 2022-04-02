@@ -11,6 +11,7 @@ using namespace std;
 int n, m;
 char maze[51][52];
 int answer = -1;
+bool visited[1 << 6][51][51];
 
 int direction[4][2] = {
     {-1, 0},
@@ -21,20 +22,18 @@ int direction[4][2] = {
 
 struct node
 {
-    int last_x;
-    int last_y;
     int x;
     int y;
     int depth;
     int keys;
-    int key_count;
-    map<pair<int, int>, int> visited;
 };
 
 void bfs(int x, int y)
 {
     queue<node> q;
-    q.push({-1, -1, x, y, 0, 0, 0, map<pair<int, int>, int>() });
+    q.push({x, y, 0, 0});
+    visited[0][x][y] = true;
+
 
     while (q.empty() == false)
     {
@@ -43,35 +42,18 @@ void bfs(int x, int y)
 
         x = cur.x;
         y = cur.y;
+        int keys = cur.keys;
 
         if (maze[x][y] == '1')
         {
-            if (answer < 0 || answer > cur.depth)
-                answer = cur.depth;
-            return;
+			answer = cur.depth;
+			return;
         }
-        else if (maze[x][y] >= 'a' && maze[x][y] <= 'z')
-        {
-            if ((cur.keys & (1 << (maze[x][y] - 'a'))) == 0)
-            {
-                ++cur.key_count;
-                cur.keys |= (1 << (maze[x][y] - 'a'));
-
-                cur.last_x = -1;
-                cur.last_y = -1;
-            }
-        }
-
-        cur.visited[{x, y}] += 1;
-
-
+    
         for (int i = 0; i < 4; ++i)
         {
             int next_x = x + direction[i][0];
             int next_y = y + direction[i][1];
-
-            if (cur.last_x == next_x && cur.last_y == next_y)
-                continue;
 
             if (next_x < 0 || next_x >= n)
                 continue;
@@ -79,19 +61,32 @@ void bfs(int x, int y)
             if (next_y < 0 || next_y >= m)
                 continue;
 
-            if (cur.visited[{next_x, next_y}] >= cur.key_count + 1)
+            if (visited[keys][next_x][next_y])
                 continue;
 
             if (maze[next_x][next_y] == '#')
                 continue;
 
-            if (maze[next_x][next_y] >= 'A' && maze[next_x][next_y] <= 'Z')
+            if (maze[next_x][next_y] == '.' || maze[next_x][next_y] == '1' || maze[next_x][next_y] == '0')
             {
-                if ((cur.keys & (1 << (maze[next_x][next_y]-'A'))) == 0 )
-                    continue;
+                visited[keys][next_x][next_y] = true;
+                q.push({ next_x, next_y, cur.depth + 1, keys });
             }
+            else if (maze[next_x][next_y] >= 'A' && maze[next_x][next_y] <= 'F')
+            {
+                if ((keys & (1 << (maze[next_x][next_y] - 'A'))) != 0)
+                {
+                    visited[keys][next_x][next_y] = true;
+                    q.push({ next_x, next_y, cur.depth + 1, keys });
+                }
+            }
+            else if (maze[next_x][next_y] >= 'a' && maze[next_x][next_y] <= 'f')
+			{
+				int next_keys = keys | (1 << (maze[next_x][next_y] - 'a'));
+				visited[next_keys][next_x][next_y] = true;
+				q.push({ next_x, next_y, cur.depth + 1, next_keys });
+			}
 
-            q.push({x, y, next_x, next_y, cur.depth + 1, cur.keys, cur.key_count, cur.visited });
         }
     }
 }
