@@ -29,6 +29,7 @@ bool seat(int idx, int bit)
 {
     for (int i = 0; i < m; ++i)
     {
+        // 비트가 켜진 곳 중 한군데 라도 놓을 수 없는 자리면 실패
         if (arr[idx][i] == 'x' && (bit & (1 << i)))
             return false;
     }
@@ -41,9 +42,11 @@ bool bits(int bit, int prev_bit)
     {
         if ((1 << i) & prev_bit)
         {
+            // 이전 비트를 기준으로 좌측에 비트가 켜있는지 확인
             if (i > 0 && ((1 << (i - 1)) & bit))
                 return false;
 
+            // 이전 비트를 기준으로 우측에 비트가 켜있는지 확인
             if ((1 << (i + 1) & bit))
                 return false;
         }
