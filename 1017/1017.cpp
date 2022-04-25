@@ -17,8 +17,7 @@ int n;
 bool PrimeArray[MAX];
 vector<int> a, b, answer;
 int bias = 50;
-int fix_a;
-int fix_b;
+
 
 void Eratos(int n)
 {
@@ -48,8 +47,6 @@ bool dfs(int x)
 		if (done[p]) 
 			continue;
 
-		if (p == fix_a || p == fix_b)
-			continue;
 
 		done[p] = true;
 
@@ -114,8 +111,6 @@ int main()
 		int match = 1;
 
 		slt[i + bias] = 0;
-		fix_a = 0;
-		fix_b = i + bias;
 		for (int j = 1; j < a.size(); ++j)
 		{
 			memset(done, false, sizeof(done));
