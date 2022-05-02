@@ -42,6 +42,42 @@ void solve()
 	cout << sec;
 }
 
+string s;
+int dp[16][110][2];
+long long v;
+
+int solve(int pos, int left, bool bigger)
+{
+	if (left < 0)
+		return 10;
+	if (pos == s.size())
+		return (bigger && !left ? 0 : 10);
+	if (dp[pos][left][bigger] != -1)
+		return dp[pos][left][bigger];
+
+	dp[pos][left][bigger] = 10;
+	for (int i = (bigger ? 0 : s[pos] - '0'); i <= 9; ++i)
+	{
+		int next = solve(pos + 1, left - segment[i], bigger || (i > s[pos] - '0'));
+		if (next != 10)
+		{
+			dp[pos][left][bigger] = i;
+			break;
+		}
+	}
+	return dp[pos][left][bigger];
+}
+
+void backtrace(int pos, int left, bool bigger)
+{
+	if (pos == s.size())
+		return;
+
+	v = v * 10 + dp[pos][left][bigger];
+	backtrace(pos + 1, left - segment[dp[pos][left][bigger]], bigger || (dp[pos][left][bigger] > s[pos] - '0'));
+}
+
+
 int main()
 {
 	ios::sync_with_stdio(0);
@@ -49,6 +85,29 @@ int main()
 	cout.tie(0);
 
 
-	solve();
+	string num;
+	cin >> num;
+	
+	int sum = 0;
+	for (char& c : num)
+		sum += segment[c - '0'];
+
+	memset(dp, -1, sizeof(dp));
+	s = string(num.size(), '0');
+	solve(0, sum, 0);
+	v = 0;
+	backtrace(0, sum, 0);
+	long long answer = v - stoll(num) + (long long)pow(10, s.size());
+
+	memset(dp, -1, sizeof(dp));
+	s = num;
+	if (solve(0, sum, 0) != 10)
+	{
+		v = 0;
+		backtrace(0, sum, 0);
+		answer = v - stoll(num);
+	}
+
+	cout << answer;
 
  }
