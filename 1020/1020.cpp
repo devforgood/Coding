@@ -46,6 +46,13 @@ string s;
 int dp[16][110][2];
 long long v;
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="pos">자리 위치</param>
+/// <param name="left">남은 선분 개수</param>
+/// <param name="bigger">원본 값과 비교해서 큰지</param>
+/// <returns></returns>
 int solve(int pos, int left, bool bigger)
 {
 	if (left < 0)
@@ -56,6 +63,7 @@ int solve(int pos, int left, bool bigger)
 		return dp[pos][left][bigger];
 
 	dp[pos][left][bigger] = 10;
+	// 0~9 단 bigger false 이면 현재 자리 위치 값 부터 시작
 	for (int i = (bigger ? 0 : s[pos] - '0'); i <= 9; ++i)
 	{
 		int next = solve(pos + 1, left - segment[i], bigger || (i > s[pos] - '0'));
