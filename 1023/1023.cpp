@@ -12,7 +12,8 @@
 using namespace std;
 
 
-long long n, m;
+int n;
+long long m;
 long long dp[51][2 * 51][2];
 
 /// <summary>
@@ -22,7 +23,7 @@ long long dp[51][2 * 51][2];
 /// <param name="b">열린 괄호 수</param>
 /// <param name="c">괄호 문자열 여부</param>
 /// <returns></returns>
-long long dfs(long long a, long long b, long long c) 
+long long dfs(int a, int b, int c)
 {
     if (a == n) 
         return c || b;
@@ -33,7 +34,7 @@ long long dfs(long long a, long long b, long long c)
     return dp[a][b + 51][c] = dfs(a + 1, b + 1, c) + dfs(a + 1, b - 1, c || b < 1);
 }
 
-void dfs2(long long a, long long b, long long c, long long k) 
+void dfs2(int a, int b, int c, long long k) 
 {
     if (a == n) 
         return;
