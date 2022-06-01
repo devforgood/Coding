@@ -26,6 +26,7 @@ int NetworkFlow(int source, int sink)
         arr[source] = source;
         q.push(source);
 
+        // 최단 경로 찾기
         while (q.empty() == false && arr[sink] == -1)
         {
             int cur = q.front();
@@ -41,15 +42,18 @@ int NetworkFlow(int source, int sink)
             }
         }
 
+        // 목적지까지 경로가 없으면 중단
         if (arr[sink] == -1)
             break;
 
+        // 경로중에서 최소 남은 용량
         int c = 9e8;
         for (int i = sink; i != source; i = arr[i])
         {
             c = min(capacity[arr[i]][i] - flow[arr[i]][i], c);
         }
         
+        // 경로의 유량 증가, 반대 방향 경로 유량 감소
         for (int i = sink; i != source; i = arr[i])
         {
             flow[arr[i]][i] += c;
